@@ -1,0 +1,118 @@
+/* ALL */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* PAGES */
+.pages {
+  width: 98%;
+  margin: 1vh auto;
+  padding: 2vh 0;
+}
+@media screen and (min-width: 1200px) {
+  .pages {
+    width: 50%;
+  }
+}
+.pages .placeDate {
+  text-align: end;
+  padding-right: 3%;
+}
+.pages .title {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.pages .intro {
+  width: 98%;
+  margin: 30px auto 0;
+}
+
+/* TABLES */
+.tables {
+  margin: 0 auto;
+  width: 98%;
+}
+.tables-title {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 30px auto 20px;
+}
+.tables table {
+  width: 100%;
+}
+.tables table,
+.tables tr,
+.tables th,
+.tables td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  font-size: 0.75rem;
+}
+.tables th {
+  background-color: #df8c28;
+  padding: 0.5rem;
+  text-align: start;
+}
+.tables td:not(:last-child) {
+  text-align: center;
+}
+.tables td {
+  padding: 0.5rem;
+}
+.tables td:first-child {
+  font-weight: bold;
+}
+
+/* OUTRO */
+.outro {
+  font-size: 0.75rem;
+  width: 98%;
+  margin: 30px auto 0;
+}
+.outro .bottom {
+  text-align: end;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.6rem;
+  margin: 30px auto 0;
+  width: 98%;
+}
+
+/* TEXTS */
+.texts {
+  width: 98%;
+  margin: 0 auto;
+}
+.texts-big {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.texts-normal {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  text-align: justify;
+}
+
+.warning {
+  margin-top: 30px;
+}
+.warning .attention {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.warning .texts-normal {
+  font-size: 0.8rem;
+}

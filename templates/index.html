@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rapport de recherche</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css', _external=True) }}" />
+  </head>
+  <body>
+    <!-- PAGE 1 -->
+    <div class="pages">
+      <div class="logo"><img src="{{ url_for('static', filename='images/logo.PNG', _external=True)}}" alt="Logo" /></div>
+      <div class="placeDate">Neuchâtel, {{datetime}}</div>
+      <div class="title">Rapport de recherche<br />{{marque}}</div>
+      <div class="intro">Madame, Monsieur,<br />Suite à votre commande, nous vous prions de bien vouloir trouver ci-dessous le résultat de votre recherche.</div>
+       <!-- TABLE -->
+      <div class="tables">
+        <div class="tables-title">
+      {% for table in tables[:2] %}
+      <br> {{titles[loop.index]}} </br>
+     
+        <br>{{ table|safe }}</br>
+      {% endfor %}
+       </div>
+</div>
+    <!-- TABLE -->
+      <div class="footer">
+        <div class="left">
+          LEGALNOTA – RAPPORT DE RECHERCHE<br />
+          Type de recherche : Recherche l’identique et similaire
+        </div>
+        <div class="right">1</div>
+      </div>
+    </div>
+    <!-- PAGE 2 -->
+    <div class="pages">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo.PNG',  _external=True)}}" alt="Logo" />
+      </div>
+      <!-- TABLE -->
+      <div class="tables">
+            <div class="tables-title">
+      {% for table in tables[2:] %}
+      <br> {{titles[2:][loop.index]}} </br>
+         
+          <br>{{ table|safe }}</br>
+      {% endfor %}
+           </div>
+    </div>
+        <!-- TABLE -->
+        <div class="tables-title" style="text-transform: none !important">1.5 Organisations intergouvernementales, institutions internationales ou secrétariats</div>
+        <table>
+          <tr>
+            <th>Organisation</th>
+            <th>Siège</th>
+          </tr>
+          <tr>
+            <td>Aucun résultat</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Aucun résultat</td>
+            <td>-</td>
+          </tr>
+        </table>
+      </div>
+      <div class="outro">
+        <div class="top">Nous restons à votre disposition pour tout renseignement complémentaire et vous prions d'agréer, Madame, Monsieur, nos salutations les meilleures</div>
+        <div class="bottom">L’équipe de LegalNota</div>
+      </div>
+      <div class="footer">
+        <div class="left">
+          LEGALNOTA – RAPPORT DE RECHERCHE<br />
+          Type de recherche : Recherche l’identique et similaire
+        </div>
+        <div class="right">2</div>
+      </div>
+    </div>
+    <div class="pages">
+      <div class="logo"><img src="{{ url_for('static', filename='images/logo.PNG',  _external=True)}}" alt="Logo" /></div>
+      <div class="texts">
+        <div class="texts-big">Vous avez entre les mains le rapport de recherche: et maintenant ?</div>
+        <div class="texts-normal">
+          Le rapport de recherche doit vous aider à décider si vous allez déposer votre signe ou non. Il vous fournit une liste aussi précise et exhaustive que possible de noms susceptibles de prêter à confusion avec votre signe. Nous préférons
+          mentionner un nom de trop que d'en omettre un.
+        </div>
+        <div class="texts-normal">Vérifiez qu’Il n’y a pas de conflit entre marques et raisons de commerce et/ou un nom de domaine et/ou organisations intergouvernementales, institutions internationales ou secrétariats.</div>
+        <div class="texts-big">Comment déposer votre marque ?</div>
+        <div class="texts-normal">Si vous souhaitez déposer une marque, nous vous invitons à utiliser notre équipe LegalMarque pour vous accompagner dans cette démarche</div>
+        <div class="texts-big">Quels sont les risques que l'on s'oppose à votre enregistrement ?</div>
+        <div class="texts-normal">
+          Nous ne pouvons pas vous donner de réponse définitive à cette question. Les critères déterminant la question de savoir si un signe prête à confusion ou non dépendent en effet de sa nature (descriptif ou fantaisiste) et de sa conception
+          (avec ou sans élément figuratif).
+        </div>
+        <div class="texts-normal">Vous trouverez des indications utiles à ce sujet dans la fiche informative « Risque de confusion ou non ? » que vous pouvez consulter</div>
+        <div class="texts-normal">En cas de doutes et pour une appréciation juridique approfondie du risque de conflit entre votre signe et des marques enregistrées, nous vous recommandons de faire appel à l’un de nos conseils en marques.</div>
+        <div class="texts-big">Quel est le délai d'opposition en matière de marque ?</div>
+        <div class="texts-normal">
+          L'opposition à une marque doit être introduite dans un délai de trois mois à compter de la publication de l'enregistrement de la marque (art. 31 al. 2 LPM). Le délai ne peut pas être prolongé (art. 22 al. 1 PA) et une poursuite de la
+          procédure en cas de non-respect du délai est exclue (art. 41 al. 4 let. c LPM).
+        </div>
+        <div class="texts-normal">Pour les enregistrements suisses, le délai d'opposition est déclenché par la publication. Il commence dès lors à courir le jour de sa publication à minuit.</div>
+        <div class="texts-normal">
+          Le délai prend fin le jour du dernier mois dont la date correspond au jour à partir duquel il a commencé à courir. S'il n'y a pas, dans le dernier mois, de jour correspondant, le délai prend fin le dernier jour dudit mois (art. 2 OPM).
+          Lorsque le délai échoit un samedi, un dimanche ou un jour férié selon le droit fédéral ou cantonal, son terme est reporté au premier jour ouvrable qui suit. Est déterminant le droit cantonal du canton où le déposant ou son représentant a
+          son domicile ou son siège (art. 20 al. 3 PA).
+        </div>
+        <div class="texts-normal">Exemples pour la computation des délais: Publication d'une marque suisse le 17 février 2016 ; Le délai commence à courir le 17 février 2016 à minuit; il arrive à échéance le 17 mai 2016 à minuit.</div>
+        <div class="warning">
+          <span class="attention">Attention</span><br />
+          <div class="texts-normal">
+            L'interprétation des résultats peut nécessiter le recours à un spécialiste tel qu'un conseil en propriété industrielle. LegalNota met en oeuvre tous les moyens dont il dispose pour assurer aux recherches la plus grande fiabilité.
+            Toutefois, compte tenu notamment de l'ampleur des bases de données consultées, le résultat peut exceptionnellement comporter des errurs ou omissions. Celles-ci ne sauraient engager la responsabilité de LegalNota.
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="left">
+          LEGALNOTA – RAPPORT DE RECHERCHE<br />
+          Type de recherche : Recherche l’identique et similaire
+        </div>
+        <div class="right">3</div>
+      </div>
+    </div>
+  </body>
+</html>
